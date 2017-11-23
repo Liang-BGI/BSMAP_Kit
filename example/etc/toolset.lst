@@ -1,0 +1,7 @@
+bsmap = /usr/local/bin/bsmap
+samtools = /usr/local/bin/samtools
+methratio = /usr/local/util/methratio.py
+binomialTest = /usr/local/util/binomialTest.FT.r
+methBaseC_Completing = /usr/local/util/methBaseC_Completing.FT.pl
+CpG_Classifier = /usr/local/util/CpG_Classifier.FT.pl
+fasta2methBaseC = /usr/local/util/fasta2methBaseC.FT.pl

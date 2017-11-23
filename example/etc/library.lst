@@ -1,0 +1,4 @@
+sample1 rep1    lib1    lane1_lib1_L01   1  /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib1_L01_1_1.fq.gz   /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib1_L01_1_2.fq.gz
+sample1 rep1    lib1    lane1_lib1_L01   2  /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib1_L01_2_1.fq.gz   /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib1_L01_2_2.fq.gz
+sample1 rep2    lib2    lane1_lib2_L01   3  /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib2_L01_3_1.fq.gz   /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib2_L01_3_2.fq.gz
+sample1 rep2    lib2    lane1_lib2_L01   4  /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib2_L01_4_1.fq.gz   /Users/yuhao/Public/Code/BSMAP_Kit/example/data/library/lane1_lib2_L01_4_2.fq.gz

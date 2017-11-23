@@ -1,0 +1,4 @@
+phred: 33
+strand_specific: no
+min_insert_size: 0
+max_insert_size: 500
