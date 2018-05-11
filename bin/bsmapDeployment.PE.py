@@ -282,10 +282,10 @@ if __name__ == '__main__':
         script1 = open('s2.mapping.sh', 'w')
         script2 = open('s3.bam2base.sh', 'w')
         script3 = open('s4.cleaning.sh', 'w')
-        print >> script0, command[0]
-        print >> script1, command[1]
-        print >> script2, command[2]
-        print >> script3, command[3]
+        print >> script0, command[0],
+        print >> script1, command[1],
+        print >> script2, command[2],
+        print >> script3, command[3],
         script0.close()
         script1.close()
         script2.close()
