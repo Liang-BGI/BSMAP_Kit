@@ -215,7 +215,7 @@ def step(outdir, \
                                 ' && ' + bsmap + ' -d ' + ref_genome + ' -a ' + read1 + ' -b ' + read2 + \
                                 ' -z ' + str(phred) + ' -n ' + str(judge[strand_specific]) + ' -m ' + str(min_insert_size) + ' -x ' + str(max_insert_size) + \
                                 ' | ' + samtools + ' view -Sb -' + \
-                                ' | ' + samtools + ' sort -@ ' + str(num_thread) + ' ' + out_path + '/' + lane + '_' + index + '.sort' + \
+                                ' | ' + samtools + ' sort -@ ' + str(num_thread) + ' - ' + out_path + '/' + lane + '_' + index + '.sort' + \
                                 ' && ' + samtools + ' index ' + out_path + '/' + lane + '_' + index + '.sort.bam' + \
                                 ' && ' + samtools + ' flagstat ' + out_path + '/' + lane + '_' + index + '.sort.bam > ' + out_path + '/' + lane + '_' + index + '.sort.bam.mappedRate' + \
                                 ' && echo "job end at: $(date +%Y-%m-%d:%H:%M:%S)"\n'
