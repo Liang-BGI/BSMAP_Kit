@@ -191,7 +191,7 @@ def deal_parameter_set(parameter_set_path):
 def step(outdir, \
          ref_genome, library_set, phred, strand_specific, min_insert_size, max_insert_size, \
          bsmap, samtools, binomialTest, methBaseC_Completing, CpG_Classifier, fasta2methBaseC, num_thread):
-    judge = {'yes':1, 'no':0}
+    stdSpec_judge = {'yes':0, 'no':1}
 
     cmd0 = 'echo "job start at: $(date +%Y-%m-%d:%H:%M:%S)" && ' + \
            'cat ' + ref_genome + ' | perl ' + fasta2methBaseC + ' > ' + ref_genome + '.methBaseC.gz' + \
@@ -213,7 +213,7 @@ def step(outdir, \
                         cmd1 += 'echo "job start at: $(date +%Y-%m-%d:%H:%M:%S)" && ' + \
                                 'mkdir -p ' + out_path + \
                                 ' && ' + bsmap + ' -d ' + ref_genome + ' -a ' + read1 + ' -b ' + read2 + \
-                                ' -z ' + str(phred) + ' -n ' + str(judge[strand_specific]) + ' -m ' + str(min_insert_size) + ' -x ' + str(max_insert_size) + \
+                                ' -z ' + str(phred) + ' -n ' + str(stdSpec_judge[strand_specific]) + ' -m ' + str(min_insert_size) + ' -x ' + str(max_insert_size) + \
                                 ' | ' + samtools + ' view -Sb -' + \
                                 ' | ' + samtools + ' sort -@ ' + str(num_thread) + ' - ' + out_path + '/' + lane + '_' + index + '.sort' + \
                                 ' && ' + samtools + ' index ' + out_path + '/' + lane + '_' + index + '.sort.bam' + \
