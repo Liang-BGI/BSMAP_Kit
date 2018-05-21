@@ -221,7 +221,7 @@ def step(outdir, \
                                 ' && echo "job end at: $(date +%Y-%m-%d:%H:%M:%S)"\n'
 
                         cmd2 += 'echo "job start at: $(date +%Y-%m-%d:%H:%M:%S)" && ' + \
-                                'python ' + methBaseC_Completing + \
+                                'python ' + methratio + \
                                 ' -o ' + out_path + '/' + lane + '_' + index + '.methBaseC' + \
                                 ' -d ' + ref_genome + \
                                 ' -u -z -r -i correct ' + out_path + '/' + lane + '_' + index + '.sort.bam' + \
