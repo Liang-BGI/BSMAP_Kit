@@ -213,7 +213,7 @@ def step(outdir, \
                         cmd1 += 'echo "job start at: $(date +%Y-%m-%d:%H:%M:%S)" && ' + \
                                 'mkdir -p ' + out_path + \
                                 ' && ' + bsmap + ' -d ' + ref_genome + ' -a ' + read1 + ' -b ' + read2 + \
-                                ' -z ' + str(phred) + ' -n ' + str(stdSpec_judge[strand_specific]) + ' -m ' + str(min_insert_size) + ' -x ' + str(max_insert_size) + \
+                                ' -u -z ' + str(phred) + ' -n ' + str(stdSpec_judge[strand_specific]) + ' -m ' + str(min_insert_size) + ' -x ' + str(max_insert_size) + \
                                 ' | ' + samtools + ' view -Sb -' + \
                                 ' | ' + samtools + ' sort -@ ' + str(num_thread) + ' - ' + out_path + '/' + lane + '_' + index + '.sort' + \
                                 ' && ' + samtools + ' index ' + out_path + '/' + lane + '_' + index + '.sort.bam' + \
