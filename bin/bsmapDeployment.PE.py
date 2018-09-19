@@ -224,7 +224,7 @@ def step(outdir, \
                                 'python ' + methratio + \
                                 ' -o ' + out_path + '/' + lane + '_' + index + '.methBaseC' + \
                                 ' -d ' + ref_genome + \
-                                ' -u -z -r -i correct ' + out_path + '/' + lane + '_' + index + '.sort.bam' + \
+                                ' -u -z -r -i correct -s ' + samtools[:-8] + ' ' + out_path + '/' + lane + '_' + index + '.sort.bam' + \
                                 ' && cat ' + out_path + '/' + lane + '_' + index + '.methBaseC' + \
                                 ' | Rscript ' + binomialTest + ' 0.9950' + \
                                 ' | gzip -c > ' + out_path + '/' + lane + '_' + index + '.binTest.methBaseC.gz' + \
@@ -266,7 +266,7 @@ if __name__ == '__main__':
         methBaseC_Completing = toolset['methBaseC_Completing']
         CpG_Classifier = toolset['CpG_Classifier']
         fasta2methBaseC = toolset['fasta2methBaseC']
-        
+
         phred = parameter_set['phred']
         strand_specific = parameter_set['strand_specific']
         min_insert_size = parameter_set['min_insert_size']
