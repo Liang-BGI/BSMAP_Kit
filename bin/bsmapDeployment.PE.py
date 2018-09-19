@@ -194,7 +194,7 @@ def step(outdir, \
     stdSpec_judge = {'yes':0, 'no':1}
 
     cmd0 = 'echo "job start at: $(date +%Y-%m-%d:%H:%M:%S)" && ' + \
-           'cat ' + ref_genome + ' | perl ' + fasta2methBaseC + ' > ' + ref_genome + '.methBaseC.gz' + \
+           'cat ' + ref_genome + ' | perl ' + fasta2methBaseC + ' | gzip -c > ' + ref_genome + '.methBaseC.gz' + \
            ' && echo "job end at: $(date +%Y-%m-%d:%H:%M:%S)"\n'
     cmd1 = ''
     cmd2 = ''
